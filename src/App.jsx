@@ -25,6 +25,12 @@ function App() {
   return (
     <>
       <MyDocument />
+      <div>
+        <h1>My PDF Document</h1>
+        <PDFDownloadLink document={<MyDocument />} fileName="myDocument.pdf">
+          {({ loading }) => (loading ? 'Loading document...' : 'Download PDF')}
+        </PDFDownloadLink>
+  </div>
     </>
   )
 }
